@@ -17,16 +17,18 @@ namespace WFA_HastaneRandevuOtomasyonu
             InitializeComponent();
         }
 
-        KullaniciClass kullanici = new KullaniciClass();
-        public static frmMenu frmMenu = new frmMenu();
+        KullaniciClass _kullanici;
+        frmMenu _frmMenu;
         private void frmLogin_Load(object sender, EventArgs e)
         {
-            kullanici.KullaniciEkle();
+            _kullanici = new KullaniciClass();
+            _kullanici.KullaniciEkle();
         }
 
-        string kullaniciAdi,parola;
+        string kullaniciAdi, parola;
         private void btnGirisYap_Click(object sender, EventArgs e)
         {
+            _frmMenu = new frmMenu();
             kullaniciAdi = txtKullaniciAd.Text;
             parola = txtKullaniciParola.Text;
 
@@ -34,22 +36,22 @@ namespace WFA_HastaneRandevuOtomasyonu
             {
                 if (kullaniciAdi == kullaniciKontrol.Ad && parola == kullaniciKontrol.Parolasi)
                 {
-                    frmMenu.lblKullaniciAdi.Text = kullaniciAdi;
+                    _frmMenu.lblKullaniciAdi.Text = kullaniciAdi;
                     switch (kullaniciKontrol.Rolu)
                     {
                         case Rolu.Admin:
                             frmMenu.kullaniciRolu = "Admin";
-                            frmMenu.Show();
+                            _frmMenu.Show();
                             this.Hide();
                             break;
                         case Rolu.Member:
                             frmMenu.kullaniciRolu = "Member";
-                            frmMenu.Show();
+                            _frmMenu.Show();
                             this.Hide();
                             break;
                         case Rolu.Moderator:
                             frmMenu.kullaniciRolu = "Moderator";
-                            frmMenu.Show();
+                            _frmMenu.Show();
                             this.Hide();
                             break;
                         default:
@@ -57,7 +59,6 @@ namespace WFA_HastaneRandevuOtomasyonu
 
                     }
                 }
-
             }
         }
     }

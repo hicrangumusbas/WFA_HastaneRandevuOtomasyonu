@@ -48,11 +48,10 @@
             this.txtTCNo = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btRandevuListele = new System.Windows.Forms.Button();
-            this.btRandevuAlGbx = new System.Windows.Forms.Button();
-            this.btnDoktorEkleGbx = new System.Windows.Forms.Button();
-            this.btnBransEkleGbx = new System.Windows.Forms.Button();
             this.gbxRandevuEkle = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnMenuDon = new System.Windows.Forms.Button();
+            this.btnCikis = new System.Windows.Forms.Button();
             this.gbxRandevuEkle.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -65,6 +64,7 @@
             this.dtpRandevuTarihi.Name = "dtpRandevuTarihi";
             this.dtpRandevuTarihi.Size = new System.Drawing.Size(331, 26);
             this.dtpRandevuTarihi.TabIndex = 5;
+            this.dtpRandevuTarihi.Validating += new System.ComponentModel.CancelEventHandler(this.dtpRandevuTarihi_Validating);
             // 
             // cbxDoktorSecim
             // 
@@ -85,6 +85,7 @@
             this.cbxBransSecim.Name = "cbxBransSecim";
             this.cbxBransSecim.Size = new System.Drawing.Size(331, 26);
             this.cbxBransSecim.TabIndex = 3;
+            this.cbxBransSecim.SelectedIndexChanged += new System.EventHandler(this.cbxBransSecim_SelectedIndexChanged);
             // 
             // label8
             // 
@@ -159,6 +160,7 @@
             this.btnbtn12_00.TabIndex = 11;
             this.btnbtn12_00.Text = "12:00";
             this.btnbtn12_00.UseVisualStyleBackColor = false;
+            this.btnbtn12_00.Click += new System.EventHandler(this.SaatSecimi_Click);
             // 
             // btnbtn11_30
             // 
@@ -172,6 +174,7 @@
             this.btnbtn11_30.TabIndex = 11;
             this.btnbtn11_30.Text = "11:30";
             this.btnbtn11_30.UseVisualStyleBackColor = false;
+            this.btnbtn11_30.Click += new System.EventHandler(this.SaatSecimi_Click);
             // 
             // btnbtn11_00
             // 
@@ -185,6 +188,7 @@
             this.btnbtn11_00.TabIndex = 10;
             this.btnbtn11_00.Text = "11:00";
             this.btnbtn11_00.UseVisualStyleBackColor = false;
+            this.btnbtn11_00.Click += new System.EventHandler(this.SaatSecimi_Click);
             // 
             // btn10_30
             // 
@@ -198,6 +202,7 @@
             this.btn10_30.TabIndex = 9;
             this.btn10_30.Text = "10:30";
             this.btn10_30.UseVisualStyleBackColor = false;
+            this.btn10_30.Click += new System.EventHandler(this.SaatSecimi_Click);
             // 
             // btn10_00
             // 
@@ -211,6 +216,7 @@
             this.btn10_00.TabIndex = 8;
             this.btn10_00.Text = "10:00";
             this.btn10_00.UseVisualStyleBackColor = false;
+            this.btn10_00.Click += new System.EventHandler(this.SaatSecimi_Click);
             // 
             // btn09_30
             // 
@@ -224,6 +230,7 @@
             this.btn09_30.TabIndex = 7;
             this.btn09_30.Text = "09:30";
             this.btn09_30.UseVisualStyleBackColor = false;
+            this.btn09_30.Click += new System.EventHandler(this.SaatSecimi_Click);
             // 
             // btn09_00
             // 
@@ -237,6 +244,7 @@
             this.btn09_00.TabIndex = 6;
             this.btn09_00.Text = "09:00";
             this.btn09_00.UseVisualStyleBackColor = false;
+            this.btn09_00.Click += new System.EventHandler(this.SaatSecimi_Click);
             // 
             // txtTCNo
             // 
@@ -245,6 +253,7 @@
             this.txtTCNo.Name = "txtTCNo";
             this.txtTCNo.Size = new System.Drawing.Size(331, 26);
             this.txtTCNo.TabIndex = 0;
+            this.txtTCNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTCNo_KeyPress);
             // 
             // label3
             // 
@@ -261,55 +270,14 @@
             this.btRandevuListele.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btRandevuListele.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btRandevuListele.ForeColor = System.Drawing.SystemColors.Control;
-            this.btRandevuListele.Location = new System.Drawing.Point(347, 13);
+            this.btRandevuListele.Location = new System.Drawing.Point(13, 13);
             this.btRandevuListele.Margin = new System.Windows.Forms.Padding(3, 15, 3, 3);
             this.btRandevuListele.Name = "btRandevuListele";
-            this.btRandevuListele.Size = new System.Drawing.Size(101, 27);
+            this.btRandevuListele.Size = new System.Drawing.Size(169, 27);
             this.btRandevuListele.TabIndex = 29;
             this.btRandevuListele.Text = "Randevuları Listele";
             this.btRandevuListele.UseVisualStyleBackColor = false;
-            // 
-            // btRandevuAlGbx
-            // 
-            this.btRandevuAlGbx.BackColor = System.Drawing.Color.Black;
-            this.btRandevuAlGbx.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btRandevuAlGbx.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btRandevuAlGbx.ForeColor = System.Drawing.SystemColors.Control;
-            this.btRandevuAlGbx.Location = new System.Drawing.Point(235, 13);
-            this.btRandevuAlGbx.Margin = new System.Windows.Forms.Padding(3, 15, 3, 3);
-            this.btRandevuAlGbx.Name = "btRandevuAlGbx";
-            this.btRandevuAlGbx.Size = new System.Drawing.Size(101, 27);
-            this.btRandevuAlGbx.TabIndex = 28;
-            this.btRandevuAlGbx.Text = "Randevu Al";
-            this.btRandevuAlGbx.UseVisualStyleBackColor = false;
-            // 
-            // btnDoktorEkleGbx
-            // 
-            this.btnDoktorEkleGbx.BackColor = System.Drawing.Color.Black;
-            this.btnDoktorEkleGbx.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnDoktorEkleGbx.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDoktorEkleGbx.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnDoktorEkleGbx.Location = new System.Drawing.Point(124, 13);
-            this.btnDoktorEkleGbx.Margin = new System.Windows.Forms.Padding(3, 15, 3, 3);
-            this.btnDoktorEkleGbx.Name = "btnDoktorEkleGbx";
-            this.btnDoktorEkleGbx.Size = new System.Drawing.Size(101, 27);
-            this.btnDoktorEkleGbx.TabIndex = 27;
-            this.btnDoktorEkleGbx.Text = "Doktor Ekle";
-            this.btnDoktorEkleGbx.UseVisualStyleBackColor = false;
-            // 
-            // btnBransEkleGbx
-            // 
-            this.btnBransEkleGbx.BackColor = System.Drawing.Color.Black;
-            this.btnBransEkleGbx.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnBransEkleGbx.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBransEkleGbx.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnBransEkleGbx.Location = new System.Drawing.Point(13, 13);
-            this.btnBransEkleGbx.Margin = new System.Windows.Forms.Padding(3, 15, 3, 3);
-            this.btnBransEkleGbx.Name = "btnBransEkleGbx";
-            this.btnBransEkleGbx.Size = new System.Drawing.Size(101, 27);
-            this.btnBransEkleGbx.TabIndex = 26;
-            this.btnBransEkleGbx.Text = "Branş Ekle";
-            this.btnBransEkleGbx.UseVisualStyleBackColor = false;
+            this.btRandevuListele.Click += new System.EventHandler(this.btRandevuListele_Click);
             // 
             // gbxRandevuEkle
             // 
@@ -344,15 +312,46 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnMenuDon);
             this.groupBox1.Controls.Add(this.btRandevuListele);
-            this.groupBox1.Controls.Add(this.btRandevuAlGbx);
-            this.groupBox1.Controls.Add(this.btnDoktorEkleGbx);
-            this.groupBox1.Controls.Add(this.btnBransEkleGbx);
-            this.groupBox1.Location = new System.Drawing.Point(12, 5);
+            this.groupBox1.Controls.Add(this.btnCikis);
+            this.groupBox1.Location = new System.Drawing.Point(12, 0);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(816, 48);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
+            // 
+            // btnMenuDon
+            // 
+            this.btnMenuDon.BackColor = System.Drawing.Color.Transparent;
+            this.btnMenuDon.BackgroundImage = global::WFA_HastaneRandevuOtomasyonu.Properties.Resources.back;
+            this.btnMenuDon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnMenuDon.FlatAppearance.BorderSize = 0;
+            this.btnMenuDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenuDon.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnMenuDon.Location = new System.Drawing.Point(740, 11);
+            this.btnMenuDon.Margin = new System.Windows.Forms.Padding(3, 15, 3, 3);
+            this.btnMenuDon.Name = "btnMenuDon";
+            this.btnMenuDon.Size = new System.Drawing.Size(32, 31);
+            this.btnMenuDon.TabIndex = 35;
+            this.btnMenuDon.UseVisualStyleBackColor = false;
+            this.btnMenuDon.Click += new System.EventHandler(this.btnMenuDon_Click);
+            // 
+            // btnCikis
+            // 
+            this.btnCikis.BackColor = System.Drawing.Color.Transparent;
+            this.btnCikis.BackgroundImage = global::WFA_HastaneRandevuOtomasyonu.Properties.Resources.cikis;
+            this.btnCikis.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCikis.FlatAppearance.BorderSize = 0;
+            this.btnCikis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCikis.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnCikis.Location = new System.Drawing.Point(778, 11);
+            this.btnCikis.Margin = new System.Windows.Forms.Padding(3, 15, 3, 3);
+            this.btnCikis.Name = "btnCikis";
+            this.btnCikis.Size = new System.Drawing.Size(32, 31);
+            this.btnCikis.TabIndex = 34;
+            this.btnCikis.UseVisualStyleBackColor = false;
+            this.btnCikis.Click += new System.EventHandler(this.btnCikis_Click);
             // 
             // frmRandevuEkle
             // 
@@ -364,9 +363,11 @@
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.ForeColor = System.Drawing.SystemColors.Control;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmRandevuEkle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmRandevuEkle";
+            this.Load += new System.EventHandler(this.frmRandevuEkle_Load);
             this.gbxRandevuEkle.ResumeLayout(false);
             this.gbxRandevuEkle.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -377,8 +378,6 @@
         #endregion
 
         private System.Windows.Forms.DateTimePicker dtpRandevuTarihi;
-        private System.Windows.Forms.ComboBox cbxDoktorSecim;
-        private System.Windows.Forms.ComboBox cbxBransSecim;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
@@ -396,10 +395,11 @@
         private System.Windows.Forms.TextBox txtTCNo;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btRandevuListele;
-        private System.Windows.Forms.Button btRandevuAlGbx;
-        private System.Windows.Forms.Button btnDoktorEkleGbx;
-        private System.Windows.Forms.Button btnBransEkleGbx;
         private System.Windows.Forms.GroupBox gbxRandevuEkle;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnMenuDon;
+        private System.Windows.Forms.Button btnCikis;
+        public System.Windows.Forms.ComboBox cbxDoktorSecim;
+        public System.Windows.Forms.ComboBox cbxBransSecim;
     }
 }

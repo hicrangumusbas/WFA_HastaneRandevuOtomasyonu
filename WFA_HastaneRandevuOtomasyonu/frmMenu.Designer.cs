@@ -75,6 +75,7 @@
             this.pbxRandevuListesi.TabIndex = 7;
             this.pbxRandevuListesi.TabStop = false;
             this.pbxRandevuListesi.WaitOnLoad = true;
+            this.pbxRandevuListesi.Click += new System.EventHandler(this.pbxRandevuListesi_Click);
             // 
             // pbxRandevu
             // 
@@ -86,6 +87,7 @@
             this.pbxRandevu.TabIndex = 6;
             this.pbxRandevu.TabStop = false;
             this.pbxRandevu.WaitOnLoad = true;
+            this.pbxRandevu.Click += new System.EventHandler(this.pbxRandevu_Click);
             // 
             // pbxDoktor
             // 
@@ -97,6 +99,7 @@
             this.pbxDoktor.TabIndex = 5;
             this.pbxDoktor.TabStop = false;
             this.pbxDoktor.WaitOnLoad = true;
+            this.pbxDoktor.Click += new System.EventHandler(this.pbxDoktor_Click);
             // 
             // pbxBrans
             // 
@@ -108,6 +111,7 @@
             this.pbxBrans.TabIndex = 4;
             this.pbxBrans.TabStop = false;
             this.pbxBrans.WaitOnLoad = true;
+            this.pbxBrans.Click += new System.EventHandler(this.pbxBrans_Click);
             // 
             // frmMenu
             // 

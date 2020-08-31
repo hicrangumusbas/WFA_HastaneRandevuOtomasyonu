@@ -83,6 +83,16 @@ namespace WFA_HastaneRandevuOtomasyonu.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap back {
+            get {
+                object obj = ResourceManager.GetObject("back", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BB_teal_icon_4 {
             get {
                 object obj = ResourceManager.GetObject("BB_teal_icon_4", resourceCulture);
@@ -96,16 +106,6 @@ namespace WFA_HastaneRandevuOtomasyonu.Properties {
         internal static System.Drawing.Bitmap cikis {
             get {
                 object obj = ResourceManager.GetObject("cikis", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap exit {
-            get {
-                object obj = ResourceManager.GetObject("exit", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

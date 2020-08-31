@@ -17,7 +17,6 @@ namespace WFA_HastaneRandevuOtomasyonu
         public DateTime SonOturumTarihi { get; set; }
 
         public static List<KullaniciClass> KullaniciLog = new List<KullaniciClass>();
-
         private KullaniciClass kullanici;
         public void KullaniciEkle()
         {

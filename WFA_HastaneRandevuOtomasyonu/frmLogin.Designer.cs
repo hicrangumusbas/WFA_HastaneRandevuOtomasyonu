@@ -74,6 +74,7 @@
             this.txtKullaniciParola.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtKullaniciParola.Location = new System.Drawing.Point(118, 76);
             this.txtKullaniciParola.Name = "txtKullaniciParola";
+            this.txtKullaniciParola.PasswordChar = '*';
             this.txtKullaniciParola.Size = new System.Drawing.Size(331, 26);
             this.txtKullaniciParola.TabIndex = 1;
             // 
@@ -108,6 +109,7 @@
             this.Controls.Add(this.gbxDoktorEkle);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.ForeColor = System.Drawing.SystemColors.Control;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmLogin";

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace WFA_HastaneRandevuOtomasyonu
 {
+   
     public class DoktorClass : Base
     {
         public override string ToString()
@@ -13,6 +14,8 @@ namespace WFA_HastaneRandevuOtomasyonu
             return Ad;
 
         }
-        public int Deneyim { get; set; }
+        public int DeneyimYili { get; set; }
+        public int RandevuSayisi { get; set; }
     }
+
 }

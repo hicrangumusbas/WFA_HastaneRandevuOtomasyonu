@@ -11,5 +11,5 @@ namespace WFA_HastaneRandevuOtomasyonu
         public string Ad { get; set; }
 
     }
-
+   
 }
